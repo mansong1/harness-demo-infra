@@ -58,8 +58,8 @@ spec:
             mountPath: {{.Values.mountPath}}
             readOnly: true
             subPath: {{.Values.subPath}}
-        volumes:
-          - name: {{.Values.name}}-config-vol
-            configMap:
-              defaultMode: 420
-              name: {{.Values.name}}
+      volumes:
+        - name: {{.Values.name}}-config-vol
+          configMap:
+            defaultMode: 420
+            name: {{.Values.name}}

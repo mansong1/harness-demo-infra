@@ -4,7 +4,7 @@ metadata:
   name: {{.Values.name}}
 data:
   config.js: |
-    window.REACT_APP_BACKEND_URL='http://${context.api.API_HOST}:${context.api.API_PORT}';
+    window.REACT_APP_BACKEND_URL={{.Values.backend}};
 ---
 
 {{- if .Values.env.secrets}}

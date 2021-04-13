@@ -25,10 +25,3 @@ env:
   config:
     SERVER_HOST: ${context.tfserver.TF_APP_HOST}
     SERVER_PORT: ${context.tfserver.TF_APP_GRPC_PORT}
-
-
-
-
-export API_HOST=$(kubectl get svc --namespace ${infra.kubernetes.namespace} api-svc --template "{{ range (index .status.loadBalancer.ingress 0) }}{{.}}{{ end }}") 
-
-export API_PORT=$(kubectl get svc --namespace ${infra.kubernetes.namespace} api-svc -o jsonpath="{.spec.ports[1].port}")

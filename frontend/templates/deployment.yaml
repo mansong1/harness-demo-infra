@@ -1,4 +1,3 @@
-{{- if .Values.env.config}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -7,7 +6,6 @@ data:
   config.js: |
     window.REACT_APP_BACKEND_URL='http://${context.api.API_HOST}:${context.api.API_PORT}';
 ---
-{{- end}}
 
 {{- if .Values.env.secrets}}
 apiVersion: v1

@@ -53,7 +53,6 @@ spec:
       containers:
       - name: {{.Values.name}}
         image: {{.Values.image}}
-        {{- if or .Values.env.config .Values.env.secrets}}
         volumeMounts:
           - name: {{.Values.name}}-config-vol
             mountPath: {{.Values.mountPath}}

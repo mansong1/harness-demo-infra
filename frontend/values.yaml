@@ -20,5 +20,5 @@ serviceTargetPort: 80
 mountPath: /usr/share/nginx/html/config.js
 subPath: config.js
 
-backend: 'http://${context.api.API_HOST}:${context.api.API_PORT}'
+backend: http://${context.api.API_HOST}:${context.api.API_PORT}
 
